@@ -1,3 +1,5 @@
+import './Titre.css'
+
 function Titre() {
 
     return (

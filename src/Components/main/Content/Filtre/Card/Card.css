@@ -1,0 +1,17 @@
+.card{
+
+    height:10vh;
+    width:30%;
+    text-align: justify;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+
+.card img{
+
+    height:60%;
+    width:100%;
+    object-fit: contain;
+}

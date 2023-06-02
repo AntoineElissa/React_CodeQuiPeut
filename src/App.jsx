@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 /* Import des composants */
-import Titre from './Components/Titre/Hero'
-import Hero from './Components/Titre/Hero'
+import Titre from './Components/Header/Titre'
+import Hero from './Components/Hero/Hero'
 import Content from './Components/main/Content/Content'
 
 

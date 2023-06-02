@@ -1,0 +1,44 @@
+.Filtre{
+    border-top: 4px solid grey;
+    height:100%;
+    width:50%;
+    margin-top:5rem;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btns-filtre{
+    height:15%;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.btn-reset{
+    height:20%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+
+.btn-filtre{
+     height:100%;
+     width:30%;
+     border: none;
+     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+     
+
+}
+
+.btn-filtre:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+

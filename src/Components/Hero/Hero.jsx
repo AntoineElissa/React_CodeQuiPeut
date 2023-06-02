@@ -1,6 +1,6 @@
 
-import {useState} from React
-
+import {useState} from 'react'
+import './Hero.css'
 
 function Hero(){
 
@@ -12,15 +12,14 @@ function Hero(){
 
             setTextInput(e.target.value);
         
-
     }
 
     return(
 
         <div className="Hero">
 
-                <span className="Hero-title"> 
-                Hello, 
+                <span className="hero-title"> 
+                Hello, &nbsp;
                 {textInput}
                 </span>
 
@@ -28,7 +27,7 @@ function Hero(){
                 type="text"
                 name="hero-text"
                 className="hero-text-class"
-                placeholder="Lord of Chicken"
+                placeholder="Your name"
                 onChange={handleTextInput}
                 ></input>
 
