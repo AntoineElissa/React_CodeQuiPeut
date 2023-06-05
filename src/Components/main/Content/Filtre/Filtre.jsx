@@ -2,20 +2,43 @@ import './Filtre.css'
 
 
 
-function Filtre() {
+function Filtre({frameworks, filtres}) {
 
 
-    const handleTriBp = () => {
+    const [filter, setFilters] = filtres;
+    console.log("filtres " + filter);
+    
 
-        console.log("Fonction de tri");
+    /* FILTRE DATE */
+    const handleFiltreDate = () => {
+        const filterFrameworks = frameworks.filter((framework) => {
+          return framework.date > 2015;
+        });
+        setFilters(filterFrameworks);
+      };
+
+    /* FILTRE POPULARITE */
+    const handleFiltrePop = () => {
+        const filterFrameworks = frameworks.filter((framework) => {
+          return framework.popularite > 15;
+        });
+        setFilters(filterFrameworks);
     }
 
 
+    /* FILTRE DEPENDANCE */
+    const handleFiltreDep = () => {
+        const filterFrameworks = frameworks.filter((framework) => {
+            return framework.dependances > 10000;
+          });
+          setFilters(filterFrameworks);
+    }
+
+    /*      ==> RESET <===      */
     const handleResetfiltre = () => {
-
-        console.log("Reset des filtres");
-
+        setFilters(frameworks)
     }
+
 
     return (
 
@@ -23,19 +46,17 @@ function Filtre() {
 
              {/* Boutons  */}
             <div className="btns-filtre">
-                <button onClick={handleTriBp} name="btn-Age" className="btn-filtre">Date</button>
-                {/* <button onClick={TriBp} name="btn-Type" ClassName="btn-filtre">Type</button> */}
-                <button onClick={handleTriBp} name="btn-Popularite" className="btn-filtre">Popularite</button>
-                <button onClick={handleTriBp} name="btn-Dependances" className="btn-filtre">Dependances</button>
+                <button onClick={handleFiltreDate} name="btn-Age" className="btn-filtre">Date</button>
+                <button onClick={handleFiltrePop} name="btn-Popularite" className="btn-filtre">Popularite</button>
+                <button onClick={handleFiltreDep} name="btn-Dependances" className="btn-filtre">Dependances</button>
             </div>
+
 
             {/* Bouton reset */}
-            <div className="btn-ResetFiltre">
-
+            <div className="btns-filtre">
                 <button onClick={handleResetfiltre} name="btn-reset" className="btn-filtre">Reset</button>
-        
             </div>
-      
+                  
       </div>
     )
 }
